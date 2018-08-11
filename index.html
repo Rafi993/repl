@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ramda REPL</title>
+    <link href="./normalize.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <a href="https://ramdajs.com" target="_blank" class="logo">
+            <strong>Ramda</strong>
+            v0.25.0
+        </a>
+
+        <ul>
+            <li>
+                <a href="https://ramdajs.com/" target="_blank">Home</a>
+            </li>
+            <li>
+                <a href="https://ramdajs.com/docs/" target="_blank">Documentation</a>
+            </li>
+            <li class="active">
+                <a href="http://localhost:3000/" target="_blank">Try Ramda</a>
+            </li>
+            <li>
+                <a href="https://github.com/ramda/ramda" target="_blank">Github</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="workspace">
+        <div class="input">
+            <div class="header">
+                <strong>INPUT</strong>
+                <button class="reset">Reset</button>
+                <button class="share">Share</button>
+            </div>
+            <div id="container"></div>
+        </div>
+        <div class="output">
+            <div class="header">
+                <strong>OUTPUT</strong>
+                <button class="reset">Clear</button>
+                <button class="share">Tidy</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

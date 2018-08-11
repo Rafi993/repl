@@ -1,0 +1,13 @@
+{
+  "name": "ramdaRepl",
+  "version": "0.0.1",
+  "description": "ramdajs repl",
+  "main": "index.js",
+  "repository": "https://github.com/Rafi993/repl.git",
+  "author": "rafi993 <rafi993@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "monaco-editor": "0.14.2",
+    "ramda": "^0.25.0"
+  }
+}
