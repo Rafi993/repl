@@ -1,9 +1,0 @@
-{
-  "theme": "dracula",
-  "mode": {
-    "name": "javascript",
-    "json": true,
-    "globalVars": true
-  }
-}
-
