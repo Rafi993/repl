@@ -14,18 +14,33 @@ let proxy = URL.createObjectURL(
 );
 
 require(["vs/editor/editor.main"], function() {
-  let editor = monaco.editor.create(document.getElementById("container"), {
-    value: ["// use ramdajs"].join("\n"),
-    language: "javascript",
-    theme: "vs-dark"
-  });
+  // output
+  let editorOutput = monaco.editor.create(
+    document.getElementById("container-output"),
+    {
+      value: ["// output"].join("\n"),
+      language: "javascript",
+      theme: "vs-dark",
+      readOnly: true
+    }
+  );
 
-  editor.addListener("didType", () => {
+  // Input
+  let editorInput = monaco.editor.create(
+    document.getElementById("container-input"),
+    {
+      value: ["// use ramdajs"].join("\n"),
+      language: "javascript",
+      theme: "vs-dark"
+    }
+  );
+
+  editorInput.addListener("didType", () => {
     try {
-      const val = eval(editor.getValue());
-      console.log(val);
+      const val = eval(editorInput.getValue());
+      editorOutput.setValue(JSON.stringify(val));
     } catch (e) {
-      console.log("Invalid value");
+      console.log("Invalid value", e);
     }
   });
 });
