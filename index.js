@@ -26,14 +26,25 @@ require(["vs/editor/editor.main"], function() {
   );
 
   // Input
+
   let editorInput = monaco.editor.create(
     document.getElementById("container-input"),
     {
-      value: ["// use ramdajs"].join("\n"),
+      value: [""].join("\n"),
       language: "javascript",
       theme: "vs-dark"
     }
   );
+
+  const reset = document.getElementById("reset");
+  const clear = document.getElementById("clear");
+
+  reset.addEventListener("click", e => {
+    editorInput.setValue("");
+  });
+  clear.addEventListener("click", e => {
+    editorOutput.setValue("// output");
+  });
 
   editorInput.addListener("didType", () => {
     try {

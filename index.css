@@ -45,6 +45,8 @@ nav li a {
 
 .active {
   background: rgb(105, 52, 118);
+  margin-top: -14px;
+  padding-top: 14px;
 }
 
 .active a {
@@ -78,14 +80,14 @@ button {
   cursor: pointer;
 }
 
-.reset:hover {
-  color: #f55;
-  border-bottom: 5px solid #f55;
-}
-
-.share:hover {
+button:hover {
   color: #8be9fd;
   border-bottom: 5px solid #8be9fd;
+}
+
+button:nth-child(2):hover {
+  color: #f55;
+  border-bottom: 5px solid #f55;
 }
 
 #container-input,
